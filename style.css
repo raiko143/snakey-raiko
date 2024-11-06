@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@font-face {
+    font-family: 'Averago';
+    src: url('fonts/Averago.ttf') format('truetype');
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+.game-container {
+    position: relative;
+    text-align: center;
+}
+
+#gameCanvas {
+    border: 5px solid #fff; 
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.3); 
+    background-color: #000;
+    width: 800px;
+    height: 600px; 
+}
+
+#scoreboard {
+    font-size: 36px; 
+    margin-bottom: 15px; 
+    color: #ffcc00;
+    font-family: 'Averago', cursive;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.score-increase {
+    transform: scale(1.5); 
+    opacity: 0.5;
+}
+
+#gameOver {
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top: 50%; 
+    left: 100%; 
+    transform: translate(-50%, -50%); 
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+#restartButton {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 24px;
+    background-color: #228B22; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#restartButton:hover {
+    background-color: #66cdaa;
+}
+
+#controls {
+    margin-top: 30px; 
+}
+
+.control-button {
+    background-color: #333;
+    color: #fff;
+    border: 3px solid #ffcc00; 
+    border-radius: 8px; 
+    padding: 10px 25px; 
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.control-button:hover {
+    background-color: #ffcc00;
+}
+
+#creator {
+    margin-top: 30px; 
+    font-size: 20px; 
+    color: #ffcc00; 
+    font-family: 'Press Start 2P', cursive; 
+    text-shadow: 
+        2px 2px 5px rgba(0, 0, 0, 0.7), 
+        0px 0px 20px rgba(255, 255, 0, 0.5); 
+    background: linear-gradient(90deg, #ffcc00, #ff6347); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    animation: flicker 1.5s infinite alternate; 
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.food {
+    animation: pulse 1s infinite; 
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.snake {
+    transition: transform 0.1s; 
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px yellow; 
+        transform: scale(1); 
+    }
+    100% {
+        box-shadow: 0 0 20px yellow; 
+        transform: scale(1.2); 
+    }
+}

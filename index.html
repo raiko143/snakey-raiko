@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div id="scoreboard">Score: 0</div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas> 
+        <div id="gameOver" style="display: none;  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 48px; color: white; text-shadow: 2px 2px 10px yellow;">Game Over!</div>
+        <div id="controls">
+            <button id="restartButton" class="control-button" onclick="restartGame()" style="display: none;">Restart</button>
+            <button id="playButton" class="control-button" onclick="startGame()">Play</button> 
+        </div>
+        <div id="creator">Created by Raiko Rainer Jones R. Estrada</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
